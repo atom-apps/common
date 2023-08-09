@@ -1,5 +1,5 @@
 package consts
 
 // swagger:enum App
-// ENUM(dictionary, user, setting)
+// ENUM(dictionary, auth, setting)
 type App string

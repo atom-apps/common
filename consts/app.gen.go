@@ -16,8 +16,8 @@ import (
 const (
 	// AppDictionary is a App of type dictionary.
 	AppDictionary App = "dictionary"
-	// AppUser is a App of type user.
-	AppUser App = "user"
+	// AppAuth is a App of type auth.
+	AppAuth App = "auth"
 	// AppSetting is a App of type setting.
 	AppSetting App = "setting"
 )
@@ -26,7 +26,7 @@ var ErrInvalidApp = fmt.Errorf("not a valid App, try [%s]", strings.Join(_AppNam
 
 var _AppNames = []string{
 	string(AppDictionary),
-	string(AppUser),
+	string(AppAuth),
 	string(AppSetting),
 }
 
@@ -41,7 +41,7 @@ func AppNames() []string {
 func AppValues() []App {
 	return []App{
 		AppDictionary,
-		AppUser,
+		AppAuth,
 		AppSetting,
 	}
 }
@@ -60,7 +60,7 @@ func (x App) IsValid() bool {
 
 var _AppValue = map[string]App{
 	"dictionary": AppDictionary,
-	"user":       AppUser,
+	"auth":       AppAuth,
 	"setting":    AppSetting,
 }
 
